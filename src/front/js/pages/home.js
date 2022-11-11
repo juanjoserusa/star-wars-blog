@@ -1,26 +1,45 @@
-import React, { useContext } from "react";
+
+import React, { useEffect, useContext } from "react";
+import Cards from "/workspace/react-flask-hello/src/front/js/component/card.js";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-			<div className="alert alert-info">
-				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
-			</div>
-			<p>
-				This boilerplate comes with lots of documentation:{" "}
-				<a href="https://github.com/4GeeksAcademy/react-flask-hello/tree/95e0540bd1422249c3004f149825285118594325/docs">
-					Read documentation
-				</a>
-			</p>
-		</div>
-	);
+   return (
+    <div className="container">
+      <h1 className="display-4 py-1 fw-bolder text-center">Characters</h1>
+      <div className="row d-flex flex-column wrapScroll mb-3  ">
+        
+        <div className="cards d-flex  ">
+          {store.characters.map((people, index) => {
+            return (<div key={index} className="col-3"> <Cards object={people} type="personas" id={index + 1}/></div>)
+          })}
+        </div>
+      </div>
+
+      <h1 className="display-4 py-1 fw-bolder text-center">Planets</h1>
+      <div className="row d-flex flex-column wrapScroll mb-3 ">
+        
+        <div className="cards d-flex ">
+          
+            {store.planets.map((planets, index) => (
+              <div key={index } className="col-3"> <Cards object={planets} type="planetas" id={index + 1}/> </div>
+            ))}
+          
+        </div>
+      </div>
+
+      <h1 className="display-4 py-1 fw-bolder text-center">Vehicles</h1>
+      <div className="row d-flex flex-column wrapScroll mb-3">
+        
+        <div className="cards d-flex ">
+            {store.vehicles.map((vehicles, index) => (
+              <div key={index} className="col-3"> <Cards object={vehicles} type="vehiculos" id={index + 1}/> </div>
+            ))}          
+        </div>
+      </div>
+    </div>
+  );
 };

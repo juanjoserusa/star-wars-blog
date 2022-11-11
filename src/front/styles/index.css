@@ -1,3 +1,38 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+body{
+    background-color: black;
+    padding-top: 8rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+h1{
+    
+        -webkit-text-stroke: 0.5px yellow;
+        color: black; 
+      
+}
+
+.detalle{
+    -webkit-text-stroke: 0.5px yellow;
+        color: black; 
+}
+
+.respuesta{
+    -webkit-text-stroke: 0.5px yellow;
+        color: black; 
+}
+
+.nombre{
+    color:yellow
+}
+
+.barra{
+    color:yellow
+}
+
+.favor:visited{
+    background-color: red !important;
+}
