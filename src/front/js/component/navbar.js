@@ -15,11 +15,12 @@ export const Navbar = () => {
 
       <div className="dropstart me-5">
         <button
-          className="btn btn-primary position-relative"
+          className="btn btn-primary position-relative  glow-on-hover "
           type="button"
           id="favoritesButton"
           data-bs-toggle="dropdown"
           aria-expanded="false"
+          data-bs-auto-close="outside"
         >
           Mis favoritos
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -29,13 +30,14 @@ export const Navbar = () => {
 		  
         </button>
         <ul
-          className="dropdown-menu"
+          className="dropdown-menu text-light bg-dark"
           aria-labelledby="dropdownMenuButton1"
         >
           {store.favorites.map((favorite, index) => {
             return (
-              <li className="d-flex">
-                <a className="dropdown-item" href="#">
+              <li className="d-flex navegacion">
+                
+                <a className="dropdown-item text-light bg-darkp-2 " href="#">
                   {favorite}
                 </a>
                 <span
@@ -44,8 +46,9 @@ export const Navbar = () => {
                     actions.deleteFavorite(index);
                   }}
                 >
-                  <i class="bi bi-person-dash-fill p-3 mt-2"></i>
+                  <i class="bi bi-trash me-4 text-danger boton"></i>
                 </span>
+                
               </li>
             );
           })}

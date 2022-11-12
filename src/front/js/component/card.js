@@ -20,7 +20,7 @@ const Cards = (props) => {
       return (
                       
         <div
-          className="card d-inline-block rounded"
+          className="card d-inline-block rounded "
           style={{ width: "14rem" }}
          
         >
@@ -33,7 +33,7 @@ const Cards = (props) => {
               ".jpg"
             }
             alt="Card image cap"
-            style={{ heith: "100%", width: "100%" }}
+            style={{ heitgh: "100%", width: "100%" }}
           />
           </div>
           
@@ -72,7 +72,7 @@ const Cards = (props) => {
           <img
             src={
               props.id == 1
-                ? "https://starwars-visualguide.com/assets/img/placeholder.jpg"
+                ? "https://oakthorne.net/wiki/images/Tatooine.jpg"
                 : "https://starwars-visualguide.com/assets/img/planets/" +
                   props.id +
                   ".jpg"
