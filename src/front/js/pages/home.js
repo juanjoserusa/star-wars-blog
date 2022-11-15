@@ -1,6 +1,6 @@
 
 import React, { useEffect, useContext } from "react";
-import Cards from "/workspace/react-flask-hello/src/front/js/component/card.js";
+import Cards from "/workspace/star-wars-blog/src/front/js/component/card.js";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 
