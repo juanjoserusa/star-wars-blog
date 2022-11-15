@@ -14,19 +14,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 
     actions: {
       fetchCharacter: () => {
-        fetch("https://swapi.dev/api/people")
+        fetch("https://swapi.tech/api/people")
           .then((response) => response.json())
           .then((data) => setStore({ characters: data.results }));
       },
 
       fetchPlanets: () => {
-        fetch("https://swapi.dev/api/planets")
+        fetch("https://swapi.tech/api/planets")
           .then((response) => response.json())
           .then((data) => setStore({ planets: data.results }));
       },
 
       fetchVehicles: () => {
-        fetch("https://swapi.dev/api/vehicles")
+        fetch("https://swapi.tech/api/vehicles")
           .then((response) => response.json())
           .then((data) => setStore({ vehicles: data.results }));
       },
