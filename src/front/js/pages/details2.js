@@ -44,7 +44,7 @@ export const Details = () => {
           <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
+      <img src="..." class="img-fluid rounded-start" alt="..." />
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -52,7 +52,7 @@ export const Details = () => {
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque sed odio sit amet tempor. Pellentesque sed finibus tortor, ut euismod ante. Proin porttitor quam a nisl bibendum, id elementum nulla pellentesque. Fusce laoreet vitae justo non pellentesque. Fusce sed fermentum velit. Nulla sit amet enim nec lectus elementum sollicitudin. Maecenas eget maximus sem, sed accumsan ipsum. Maecenas sit amet pretium ante, quis rhoncus ex. In euismod egestas metus, quis elementum nibh pulvinar a. Proin pulvinar libero non auctor facilisis.</p>
         <p class="card-text">
         <div>
-                <p className="card-text">Gender: {character?.gender}</p>
+                <p className="card-text">Gender: {character?.properties.gender}</p>
               </div>
               <div>
                 <p className="card-text">Hair color: {character?.hair_color}</p>
